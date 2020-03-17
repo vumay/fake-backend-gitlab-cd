@@ -1,5 +1,4 @@
 # Description
 
-This repository is used to demonstrate how to use Jenkinsfile to build pipeline
+This repository is used to demonstrate how to use gitlab from dev to prod
 
-by Vumay

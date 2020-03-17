@@ -101,7 +101,7 @@ check-post-deploy:
     - ansible-playbook  -i hosts --vault-password-file vault.key --private-key id_rsa --tags "preprod" --limit preprod check_deploy_app.yml
   only:
     - dev
-	
+
 deploy-prod:
   <<: *ansible
   stage: prod
@@ -110,7 +110,7 @@ deploy-prod:
   only:
     - master
 
-check-post-deploy:
+check-final:
   <<: *ansible
   stage: prod
   script:

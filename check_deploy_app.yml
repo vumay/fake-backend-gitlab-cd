@@ -10,7 +10,7 @@
     - block:
       - name: Check that you can connect to webpage
         uri:
-          url: http://54.174.225.167:3000
+          url: http://54.174.225.167
         retries: 8
         delay: 30
 

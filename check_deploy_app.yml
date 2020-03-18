@@ -12,14 +12,14 @@
         uri:
           url: http://54.174.225.167:3000
         retries: 8
-        delay: 20 
+        delay: 30
 
       - name: Check webservice application production
         uri:
           url: http://54.174.225.167:3000/health
           method: GET
         retries: 8
-        delay: 20
+        delay: 30
       tags:
         - preprod
         - prod 

@@ -1,6 +1,6 @@
 ---
 - name: Ensure application is deployed
-  hosts: localhost
+  hosts: preprod prod 
 
   become: true
   vars_files:
@@ -21,4 +21,5 @@
         retries: 8
         delay: 20
       tags:
+        - preprod
         - prod 

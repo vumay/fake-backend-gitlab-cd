@@ -111,6 +111,7 @@ deploy-prod:
     - master
 
 check-final:
+  <<: *ansible
   stage: prod
   script:
     - ansible-playbook  -i hosts --vault-password-file vault.key --private-key id_rsa --tags "prod" --limit prod check_deploy_app.yml

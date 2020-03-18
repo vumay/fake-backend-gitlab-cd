@@ -49,7 +49,7 @@
     path: "{{ home }}/fake-backend/"
     name: "{{ docker_hub_login }}/fake-backend"
     push: yes
-    tag: GitlabCD
+    tag: gitlabCD
   tags:
     - build
 
@@ -60,7 +60,7 @@
     name: battleboat_network
   tags:
     - preprod
-    - preprod
+    - prod
 # deploy api
 
 - name: Deploy mysql db
@@ -89,7 +89,7 @@
 - name: Deploy frontend
   docker_container:
     name: battleboat
-    image: vumay/fake-backend:jenkinsCD
+    image: vumay/fake-backend:gitlabCD
     state: started
     networks:
       - name: battleboat_network

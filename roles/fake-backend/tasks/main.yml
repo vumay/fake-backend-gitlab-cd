@@ -69,6 +69,7 @@
     hostname: db-vumay
     image: mysql:5.7
     state: started
+    restart_policy: always
     volumes:
       - db-data:/var/lib/mysql
     env:
@@ -91,6 +92,7 @@
     name: battleboat
     image: vumay/fake-backend:gitlabCD
     state: started
+    restart_policy: always
     networks:
       - name: battleboat_network
     volumes:

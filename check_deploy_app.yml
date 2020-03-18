@@ -16,7 +16,7 @@
 
       - name: Check webservice application production
         uri:
-          url: http://54.174.225.167:3000/health
+          url: http://54.174.225.167/health
           method: GET
         retries: 8
         delay: 30
